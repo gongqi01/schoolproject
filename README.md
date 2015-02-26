@@ -22,11 +22,11 @@ Schoolproject is an simple web application builded by Meteor(https://www.meteor.
 
  2.3 Run the project:
    
-   2.3.1 Go to the directory you downloaded from the GITHub, i.e.,
-      gongqi@ubuntu:~ $ cd schoolproject
+      2.3.1 Go to the directory you downloaded from the GITHub, i.e.,
+         gongqi@ubuntu:~ $ cd schoolproject
       
-   2.3.2 run meteor
-      gongqi@ubuntu:~/schoolproject $ meteor
+      2.3.2 run meteor
+         gongqi@ubuntu:~/schoolproject $ meteor
 
  2.4 visit the website on the browser 
     example: http://localhost:3000/
