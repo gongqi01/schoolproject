@@ -3,7 +3,7 @@
   Template.schoollist.helpers({
     schools: function () {
 
-      return Schools.find({},{sort:{name:1}});
+      return Schools.find();
     }
   });
 
@@ -12,9 +12,15 @@
 	var name = $("#nameinput").val();
 	var code = $("#codeinput").val();
 	var addr = $("#addrinput").val();
-	var emdo = "@"+$("#emdoinput").val();
-	InsertSchool(name,code,addr,emdo);
-	$("#addnewschoolform")[0].reset();
+	var emailtxt = $("#emdoinput").val()
+	var emdo = "@"+emailtxt;
+        if(!name || !code || !addr || !emailtxt)
+          alert("Please fill all blanks");
+        else
+	{
+	  InsertSchool(name,code,addr,emdo);
+	  $("#addnewschoolform")[0].reset();
+        }
     },
 
     'click a[name=deletebutton]':function (event) {

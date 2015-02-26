@@ -7,7 +7,7 @@
 
 <div class="container">
 
-  <h1>School Project</h1>
+  <h1>School list</h1>
 
 <div class="span12 pagination-centered">
   {{> schoollist}}
