@@ -1,10 +1,5 @@
 # schoolproject
 
-/***********************************************/
-/******  schoolproject *************************/
-/******  Created by Gongqi lin *****************/
-/***********************************************/
-
 Schoolproject is an simple web application builded by Meteor(https://www.meteor.com/).
 
 1. Why Meteor?
