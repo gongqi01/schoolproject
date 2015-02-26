@@ -3,7 +3,7 @@
   Template.schoollist.helpers({
     schools: function () {
 
-      return Schools.find();
+      return Schools.find({},{sort:{name:1}});
     }
   });
 
@@ -41,7 +41,7 @@
 	var id = x.getAttribute("id");
 	id = id.substr(0, id.length-4)
 	Session.set("editID", id);
-	Modal.show('exampleModal');
+	Modal.show('editModal');
     }
 
 	
