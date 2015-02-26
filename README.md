@@ -4,13 +4,13 @@ Schoolproject is an simple web application builded by Meteor(https://www.meteor.
 
 1. Why Meteor?
 
-With Meteor you write apps:
+   With Meteor you write apps:
 
     - in pure JavaScript
     - that send data over the wire, rather than HTML
     - using your choice of popular open-source libraries
 
-Documentation is available at http://docs.meteor.com/.
+   Documentation is available at http://docs.meteor.com/.
 
 2. How to run the project?
 
