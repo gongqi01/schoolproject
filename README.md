@@ -21,8 +21,10 @@ Schoolproject is an simple web application builded by Meteor(https://www.meteor.
   example: gongqi@ubuntu:~ $ git clone https://github.com/gongqi01/schoolproject.git
 
  2.3 Run the project:
+   
    2.3.1 Go to the directory you downloaded from the GITHub, i.e.,
       gongqi@ubuntu:~ $ cd schoolproject
+      
    2.3.2 run meteor
       gongqi@ubuntu:~/schoolproject $ meteor
 
