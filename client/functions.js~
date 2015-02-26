@@ -1,0 +1,9 @@
+InsertSchool = function (name, code, address, emailDomain) {
+	var doc = {
+		name : name,
+		code : code,
+		address : address,
+		emailDomain : emailDomain
+	};
+	Schools.insert(doc);
+}

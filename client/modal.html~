@@ -1,0 +1,42 @@
+<template name="exampleModal">
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit School</h4>
+                </div>
+
+                <div class="modal-body">
+		<form id="addnewschoolform">
+			<div>
+				<label>School Name:</label>
+				<input id="nameinputm" class="form-control" value="{{name}}" type="text">
+			</div>
+			<div >
+				<label>School Code:</label>
+				<input id="codeinputm" class="form-control" value="{{code}}" type="text">
+			</div>
+			<div>
+				<label>School Address:</label>
+				<input id="addrinputm" class="form-control" value="{{addr}}" type="text">
+			</div>
+			<div>
+				<label>Email Domain:</label>
+				<div class="form-group input-group">
+                                            <span class="input-group-addon">@</span>
+                                            <input id="emdoinputm" class="form-control" value="{{emdo}}" type="text">
+                                </div>
+			</div>
+		<button type="button" data-dismiss="modal" class="btn btn-warning btn pull-left">Cancel</button>   
+		<button type="button" id="submitbutton" data-dismiss="modal" class="btn btn-primary btn pull-right">Update</button>                    
+                </form> 
+                </div>
+
+                <div class="modal-footer">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>
