@@ -2,8 +2,8 @@
 
   Template.schoollist.helpers({
     schools: function () {
-
-      return Schools.find();
+      //display all schools 
+      return ReadSchool();
     }
   });
 
@@ -19,7 +19,7 @@
           alert("Please fill all blanks");
         else
 	{
-	  InsertSchool(name,code,addr,emdo);
+	  CreateSchool(name,code,addr,emdo);
 	  $("#addnewschoolform")[0].reset();
         }
     },
@@ -28,25 +28,31 @@
     'click a[name=deletebutton]':function (event) {
 	var x = event.currentTarget;
 	var id = x.getAttribute("id");
-	Schools.remove({_id:id});
+	DeleteSchool(id);
     },
  
 
-    //toggle the school details
+    //display details of a selected school
     'click td[name=details]':function (event) {
 	var x = event.currentTarget;
 	var id = x.getAttribute("id");
 	var oldID = Session.get("toggledId");
+	
 	Session.set("toggledId", id);
-	if (oldID)
-		$("#"+oldID+"di").css("display", "none");
-	if (id!=oldID)
-		$("#"+id+"di").css("display", "block");
+	
+	if (id != oldID)
+	{
+		$("#"+id+"div").css("display", "block");
+		$("#"+oldID+"div").css("display", "none");	
+	}	
 	else
+	{
+		$("#"+id+"div").css("display", "none");
 		Session.set("toggledId", "");
+	}
     },
 
-    //edit the school information
+    //edit the information of a selected school
     'click a[name=editbutton]':function (event) {
 	var x = event.currentTarget;
 	var id = x.getAttribute("id");

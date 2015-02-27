@@ -1,4 +1,9 @@
-InsertSchool = function (name, code, address, emailDomain) {
+ReadSchool = function () {
+	return Schools.find();
+}
+
+
+CreateSchool = function (name, code, address, emailDomain) {
 	var doc = {
 		name : name,
 		code : code,
@@ -20,3 +25,6 @@ UpdateSchool = function (id, name, code, address, emailDomain) {
 	}, doc);
 }
 
+DeleteSchool = function (id) {
+	Schools.remove({_id:id});
+}

@@ -41,7 +41,6 @@ Schoolproject is an simple web application builded by Meteor(https://www.meteor.
        Use /server to store source files with sensitive logic or data that should not be visible to the client.
 
    2.3 /collections
-
        Any files in this directory are used both on the server and client. This is a good place to keep database-related (MongoDB) JavaScript code.
 
 3. How to run the project under Linux/Unix (e.g., ubuntu)?

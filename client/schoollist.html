@@ -4,28 +4,25 @@
 	<div class="panel-body">
 	 <table class="table table-striped table-bordered table-hover">
 		<tbody>
+                <tr> 
+                  <th class="col-md-8 text-center">School Name</th>
+		  <th class="col-md-2 text-center">Action</th>
+                </tr>
 	  {{#each schools}}
 		<tr>
-			<td name="details" id="{{_id}}td" class="col-md-10 text-center">
+			<td name="details" id="{{_id}}td" class="col-md-8 text-center">
 
-				<div class="row">
-				<div class="col-md-4"></div>
-				<div class="col-md-6 text-left">
-					<h4>{{name}}</h4>
-				</div>				
-				</div>
-				<div class="row" id="{{_id}}tddi"  style="display: none;">
-				<div class="col-md-4"></div>
-				<div class="col-md-6 text-left">
-					<p></p>
-					<b>CODE:</b> {{code}}
-					<p></p>	
-					<b>ADDRESS:</b> {{address}}
-					<p></p>
-					<b>EMAIL DOMAIN:</b> {{emailDomain}} 
-					<p></p>
-				</div>
-				</div>
+                        <a href="#"> {{name}}</a>
+				
+                        <div class="row" id="{{_id}}tddiv"  style="display: none;">
+                        	<div class="col-md-6 text-left">
+                        		<ul>
+                           			<li><b>CODE:</b> {{code}}</li>
+                           			<li><b>ADDRESS:</b> {{address}}</li>
+		           			<li><b>EMAIL DOMAIN:</b> {{emailDomain}}</li>
+                        		</ul>
+                   		 </div>
+			</div>
 
 			</td>
 			<td class="col-md-2 text-center">
@@ -39,6 +36,8 @@
 	</div>
 	<div class="panel-footer"></div>
   </div>
+
+                    
   <div class="panel panel-primary">
 	<div class="panel-heading">Add New School</div>
 	<div class="panel-body">
