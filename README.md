@@ -90,11 +90,11 @@ Schoolproject is a simple web application built by Meteor(https://www.meteor.com
 
    5.1 Install Meteor under linux/unix environment:
 
-       Example: gongqi@ubuntu:~ $ curl https://install.meteor.com | /bin/sh
+		Example: gongqi@ubuntu:~ $ curl https://install.meteor.com | /bin/sh
 
    5.2 Get the source code from the GITHub
 
-       Example: gongqi@ubuntu:~ $ git clone https://github.com/gongqi01/schoolproject.git
+		Example: gongqi@ubuntu:~ $ git clone https://github.com/gongqi01/schoolproject.git
 
    5.3 Run the project:
    
