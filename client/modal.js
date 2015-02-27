@@ -37,14 +37,13 @@
 	var code = $("#codeinputm").val();
 	var addr = $("#addrinputm").val();
 	var emdo = "@"+$("#emdoinputm").val();
-	var id = Session.get("editID");
+	var id = Session.get("selectedID");
 	UpdateSchool(id, name,code,addr,emdo);
 	$("#addnewschoolform")[0].reset();
     }
   });
 
-getDoc = function () {
-	var id = Session.get("editID");
+function getDoc() {
+	var id = Session.get("selectedID");
 	return Schools.findOne({_id:id});
 }
-

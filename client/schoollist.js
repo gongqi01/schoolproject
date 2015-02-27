@@ -3,7 +3,7 @@
   Template.schoollist.helpers({
     schools: function () {
       //display all schools 
-      return ReadSchool();
+      return QuerySchool();
     }
   });
 
@@ -16,11 +16,12 @@
 	var emailtxt = $("#emdoinput").val()
 	var emdo = "@"+emailtxt;
         if(!name || !code || !addr || !emailtxt)
-          alert("Please fill all blanks");
+          $('#message').replaceWith(GetMsg("Please fill all blanks.",2));
         else
 	{
-	  CreateSchool(name,code,addr,emdo);
+	  InsertSchool(name,code,addr,emdo);
 	  $("#addnewschoolform")[0].reset();
+	  $('#message').replaceWith(GetMsg("<b>"+name+"</b> is added.",1));
         }
     },
     
@@ -36,20 +37,11 @@
     'click td[name=details]':function (event) {
 	var x = event.currentTarget;
 	var id = x.getAttribute("id");
-	var oldID = Session.get("toggledId");
-	
-	Session.set("toggledId", id);
-	
-	if (id != oldID)
-	{
-		$("#"+id+"div").css("display", "block");
-		$("#"+oldID+"div").css("display", "none");	
-	}	
+	var oldId = Session.get("selectedID");
+	if (oldId != id)
+		Session.set("selectedID", id);
 	else
-	{
-		$("#"+id+"div").css("display", "none");
-		Session.set("toggledId", "");
-	}
+		Session.set("selectedID", "");
     },
 
     //edit the information of a selected school
@@ -57,11 +49,13 @@
 	var x = event.currentTarget;
 	var id = x.getAttribute("id");
 	id = id.substr(0, id.length-4)
-	Session.set("editID", id);
+	Session.set("selectedID", id);
 	Modal.show('editModal');
     }
-
-	
   });
 
+
+Handlebars.registerHelper("display", function(id) {
+	return id == Session.get("selectedID");
+});
 

@@ -10,21 +10,21 @@
                 </tr>
 	  {{#each schools}}
 		<tr>
-			<td name="details" id="{{_id}}td" class="col-md-8 text-center">
+			<td name="details" id="{{_id}}" class="col-md-8 text-center">
 
-                        <a href="#"> {{name}}</a>
-				
-                        <div class="row" id="{{_id}}tddiv"  style="display: none;">
+                        <h4> {{name}}</h4>
+			{{#if isVisible _id}}
+                        <div class="row">
                         	<div class="col-md-6 text-left">
-                        
-                        		<ul id="demo">
+                        		<ul>
                            			<li><b>CODE:</b> {{code}}</li>
                            			<li><b>ADDRESS:</b> {{address}}</li>
 		           			<li><b>EMAIL DOMAIN:</b> {{emailDomain}}</li>
+						<li><b>ID:</b> {{display _id}}</li>
                         		</ul>
                    		 </div>
 			</div>
-
+			{{/if}}
 			</td>
 			<td class="col-md-2 text-center">
 				<a href="#" id="{{_id}}edit" name="editbutton">EDIT</a> <br />
@@ -43,7 +43,9 @@
 	<div class="panel-heading">Add New School</div>
 	<div class="panel-body">
 		<form id="addnewschoolform">
+		<div id="message"></div>
 		<div class="row">
+
 			<div class="col-md-3">
 				<label>School Name:</label>
 				<input id="nameinput" class="form-control" placeholder="School Name" type="text">

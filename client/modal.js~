@@ -23,8 +23,10 @@
     },
     emdo : function () {
 	var out = "@emdo";
-	
-	out.substring(2,out.length);
+	var doc = getDoc();
+	if (doc)
+		out = doc.emailDomain;
+	out = out.substring(1,out.length);
       return out;
     }
   });
@@ -35,14 +37,14 @@
 	var code = $("#codeinputm").val();
 	var addr = $("#addrinputm").val();
 	var emdo = "@"+$("#emdoinputm").val();
-	var id = Session.get("editID");
+	var id = Session.get("selectedID");
 	UpdateSchool(id, name,code,addr,emdo);
 	$("#addnewschoolform")[0].reset();
     }
   });
 
 getDoc = function () {
-	var id = Session.get("editID");
+	var id = Session.get("selectedID");
 	return Schools.findOne({_id:id});
 }
 
