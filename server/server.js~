@@ -1,5 +1,7 @@
  Meteor.startup(function () {
 
+	//only for test, clear all the data in the database, 
+        // and create the original data
 	Schools.remove({});
 
 	var tempdata = [{
