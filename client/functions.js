@@ -10,7 +10,7 @@ InsertSchool = function (name, code, address, emailDomain) {
 		address : address,
 		emailDomain : emailDomain
 	};
-	Schools.insert(doc);
+	return Schools.insert(doc);
 }
 
 UpdateSchool = function (id, name, code, address, emailDomain) {

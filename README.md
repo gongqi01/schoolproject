@@ -100,15 +100,15 @@ Schoolproject is a simple web application built by Meteor(https://www.meteor.com
    
        5.3.1 Go to the directory you downloaded from the GITHub
 
-             Example: gongqi@ubuntu:~ $ cd schoolproject
+                Example: gongqi@ubuntu:~ $ cd schoolproject
       
        5.3.2 run meteor
 
-             Example: gongqi@ubuntu:~/schoolproject $ meteor
+                Example: gongqi@ubuntu:~/schoolproject $ meteor
 
    5.4 visit the website on the browser 
 
-       Example: http://localhost:3000/
+		Example: http://localhost:3000/
 
 6. Visit the deployed project on the DigitalOcean (https://www.digitalocean.com/):
 

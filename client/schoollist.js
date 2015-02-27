@@ -19,9 +19,11 @@
           $('#message').replaceWith(GetMsg("Please fill all blanks.",2));
         else
 	{
-	  InsertSchool(name,code,addr,emdo);
+	  var id = InsertSchool(name,code,addr,emdo);
+          
 	  $("#addnewschoolform")[0].reset();
 	  $('#message').replaceWith(GetMsg("<b>"+name+"</b> is added.",1));
+	  Session.set("selectedID", id);
         }
     },
     
